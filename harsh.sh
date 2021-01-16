@@ -16,6 +16,7 @@ do
 	then
 		echo "$i already installed"
 	else
+		apt install -y $i
 	fi
 done
 
@@ -53,4 +54,3 @@ systemctl enable smbd.service nmbd.service
 echo "Adding Samba into Firewall"
 firewall-cmd --permanent --add-service=samba
 firewall-cmd --reload
- 
